@@ -37,25 +37,25 @@ Index
 Ubuntu 20.04 LTS 버전에서는 apt-get install로 python 3.8.10버전까지만 설치가 가능하다.
 PPA를 이용하여 상위 버전의 python을 설치할 수 있다.
 
->sudo apt update
->
->sudo apt install software-properties-common -y
->
-
 >sudo add-apt-repository ppa:deadsnakes/ppa
 >
-
->sudo apt install python3.10 python3.10-venv python3.10-dev
+>sudo apt-get update
+>
+>sudo apt install python3.10
 >
 
->ls -la /usr/bin/python3
+>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
 >
->sudo rm /usr/bin/python3
+>sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 2
 >
->sudo ln -s python3.10 /usr/bin/python3
+>sudo update-alternatives --config python3
 >
 >python3 --version
 >
+
+
+
+
 
 
 참고자료
