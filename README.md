@@ -14,8 +14,7 @@ Index
 
 개요
 ---
-우분투 20.04.6에서 파이썬 3.10을 설치할 수 있다.
-개발 환경 설정에 앞서 오라클 버츄얼박스와 우분투 20.04버전 iso파일을 설치한다.
+우분투 22.04.6
 
 
 개발 환경 설정
@@ -34,26 +33,21 @@ Index
 >"유저"    ALL=(ALL:ALL) ALL
 
 
-Ubuntu 20.04 LTS 버전에서는 apt-get install로 python 3.8.10버전까지만 설치가 가능하다.
-PPA를 이용하여 상위 버전의 python을 설치할 수 있다.
-
->sudo add-apt-repository ppa:deadsnakes/ppa
->
+---
 >sudo apt-get update
 >
->sudo apt install python3.10
+>sudo apt-get upgrade
 >
-
->sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+>sudo apt-get install python3-pip
 >
->sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 2
+distutils, pip 설치
+>sudo apt install --reinstall python3-distutils
 >
->sudo update-alternatives --config python3
+>sudo apt install --reinstall python3-pip
 >
->python3 --version
+ultralytics 설치
+>pip install ultralytics
 >
-
-
 
 
 
